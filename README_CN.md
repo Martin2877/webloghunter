@@ -2,6 +2,29 @@
 
 WebLogHunter 是一个功能强大的网络服务器日志分析和重放工具，专为安全专业人员和开发人员设计，用于识别 Web 服务器日志中的潜在 HTTP 攻击和可疑活动。
 
+## Workflow
+
+```mermaid
+flowchart TD
+    subgraph Replay[Replay Mode]
+        A[Log Files] -->|Input| B[WebLogHunter]
+        B -->|Replay| C[Test Host]
+    end
+    
+    subgraph Detection[Detection Mode]
+        D[Log Files] -->|Input| E[WebLogHunter]
+        E -->|Apply| F[Detection Rules]
+        F -->|Generate| G[Results]
+    end
+    
+    style Replay fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style Detection fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style A fill:#d4f1f9,stroke:#333
+    style D fill:#d4f1f9,stroke:#333
+    style C fill:#d5f5e3,stroke:#333
+    style G fill:#d5f5e3,stroke:#333
+```
+
 ## 功能特点
 
 - **日志重放**：重放日志文件中的 HTTP 请求以测试服务器响应

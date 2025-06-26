@@ -2,7 +2,7 @@
 
 WebLogHunter is a powerful tool for analyzing and replaying web server logs, designed to help security professionals and developers identify potential HTTP attacks and suspicious activities in web server logs.
 
-[中文说明](README.md)
+[中文说明](README_CN.md)
 
 ## Workflow
 
