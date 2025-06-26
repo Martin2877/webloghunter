@@ -2,6 +2,8 @@
 
 WebLogHunter 是一个功能强大的网络服务器日志分析和重放工具，专为安全专业人员和开发人员设计，用于识别 Web 服务器日志中的潜在 HTTP 攻击和可疑活动。
 
+[English](README.md) | [简体中文](README_CN.md)
+
 ## Workflow
 
 ```mermaid
