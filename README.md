@@ -2,6 +2,32 @@
 
 WebLogHunter is a powerful tool for analyzing and replaying web server logs, designed to help security professionals and developers identify potential HTTP attacks and suspicious activities in web server logs.
 
+[中文说明](README.md)
+
+## Workflow
+
+```mermaid
+flowchart TD
+    subgraph Replay[Replay Mode]
+        A[Log Files] -->|Input| B[WebLogHunter]
+        B -->|Replay| C[Test Host]
+    end
+    
+    subgraph Detection[Detection Mode]
+        D[Log Files] -->|Input| E[WebLogHunter]
+        E -->|Apply| F[Detection Rules]
+        F -->|Generate| G[Results]
+    end
+    
+    style Replay fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style Detection fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style A fill:#d4f1f9,stroke:#333
+    style D fill:#d4f1f9,stroke:#333
+    style C fill:#d5f5e3,stroke:#333
+    style G fill:#d5f5e3,stroke:#333
+```
+
+
 ## Features
 
 - **Log Replay**: Replay HTTP requests from log files to test server responses
